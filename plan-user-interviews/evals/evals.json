@@ -1,0 +1,18 @@
+{
+  "train": [
+    {
+      "input": "I need to do some user interviews for our new dashboard.",
+      "expected_behavior": "Should trigger the skill and ask the user for the missing required intake variables (Objective, Audience, Hypotheses, Context, Format, Stimuli, Success Criteria) before generating any questions."
+    },
+    {
+      "input": "I'm planning remote interviews for 30 mins with power users to test our new reporting feature. Our hypothesis is that they find the current export too slow. The goal is to see if the new design solves this. I will show them a Figma prototype. Success is a go/no-go on the design.",
+      "expected_behavior": "Should acknowledge the provided variables and proceed to Phase 2, generating a structured Interview Plan following the Output Structure, and Phase 3 guidelines."
+    }
+  ],
+  "validation": [
+    {
+      "input": "Help me write a script to talk to customers about pricing.",
+      "expected_behavior": "Should trigger the skill and stop to ask for the remaining required variables (Target Audience, Hypotheses, Context, Format, Stimuli, Success Criteria) instead of generating the script immediately."
+    }
+  ]
+}

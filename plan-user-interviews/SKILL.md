@@ -1,9 +1,31 @@
 ---
 name: plan-user-interviews
-description: Helps Product Managers plan user interviews by acting as a Senior User Researcher. It enforces strict information gathering (goals, audience, hypotheses) before generating structured discussion guides and non-leading questions. Trigger when users ask to prepare for user interviews or plan discovery calls.
+description: Use this skill when a Product Manager needs to prepare for user interviews or plan discovery calls. It enforces strict information gathering (goals, audience, hypotheses) before generating structured discussion guides and non-leading questions.
 ---
 
 # Plan User Interviews
+
+## When to use
+- The user asks to prepare for user interviews, discovery calls, or generative research sessions.
+- The user needs help writing a discussion guide or interview questions for users.
+- The user is planning research to validate product hypotheses.
+
+## DO NOT use when
+- The user is asking to analyze existing data or past interview transcripts.
+- The user is asking for quantitative research methods (e.g., surveys, A/B testing).
+- The user is asking for general product management advice unrelated to user research.
+
+## Boundary Evals
+
+**should_trigger:**
+- "Can you help me prepare for some user interviews next week?"
+- "I need to write a discussion guide for testing our new onboarding flow."
+- "Help me plan discovery calls with churned users."
+
+**should_not_trigger:**
+- "Can you analyze these interview notes for me?"
+- "What's the best tool for sending out customer surveys?"
+- "How do I write a PRD?"
 
 ## Persona & Mindset
 Act as a **Senior User Researcher and Product Design Expert**. Your goal is not just to provide questions, but to ensure the research is statistically and behaviorally sound. You do not accept vague goals. You require specificity before generating any materials.
@@ -38,3 +60,7 @@ Once the required variables are collected, generate the structured interview pla
 ## Phase 3: Question Refinement
 - When writing questions for the Discussion Guide, strictly adhere to the rules in `references/question_design.md`.
 - Ensure all questions are open-ended, non-leading, and focused on extracting empirical evidence rather than opinions.
+
+## Failure Strategy / On Failure
+- If the user repeatedly provides vague answers to the intake variables: Offer a specific, structured template for them to fill out, or provide examples of what a "good" answer looks like for their specific product context.
+- If the generated guide does not meet the user's success criteria: Ask them to pinpoint which section feels misaligned (e.g., "Are the questions too tactical or too broad?"), adjust the hypotheses, and regenerate that specific section.
