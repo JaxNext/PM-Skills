@@ -1,6 +1,6 @@
 ---
 name: plan-user-interviews
-description: Use this skill when a Product Manager needs to prepare for user interviews or plan discovery calls. It enforces strict information gathering (goals, audience, hypotheses) before generating structured discussion guides and non-leading questions.
+description: Use this skill when a Product Manager needs to prepare for user interviews or plan discovery calls. It enforces strict information gathering (goals, audience and hypotheses) before generating structured discussion guides and non-leading questions.
 ---
 
 # Plan User Interviews
