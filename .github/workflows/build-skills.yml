@@ -6,61 +6,7 @@ on:
       - main
 
 jobs:
-  build-and-release:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write # Required to create and update the GitHub Release
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Required to fetch all history so we can diff against the previous commit
-
-      - name: Identify Changed Skills and Build
-        id: build
-        run: |
-          mkdir -p dist
-          CHANGED_SKILLS_FOUND=false
-          
-          echo "🔍 Finding changed directories..."
-          
-          # Handle the case where this is a brand new branch push (before == 0000000)
-          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
-            echo "New branch detected. Building all skills."
-            CHANGED_DIRS=$(ls -d */ | sed 's#/##')
-          else
-            # Get a list of top-level directories that had files changed in this push
-            CHANGED_DIRS=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | awk -F/ '{print $1}' | sort -u)
-          fi
-          
-          # Loop through changed directories
-          for dir in $CHANGED_DIRS; do
-            # Check if the changed directory is actually a valid skill
-            if [ -d "$dir" ] && [ -f "$dir/SKILL.md" ]; then
-              echo "📦 Changes detected in $dir. Packaging..."
-              cd "$dir"
-              zip -r "../dist/$dir.skill" .
-              cd ..
-              CHANGED_SKILLS_FOUND=true
-            fi
-          done
-          
-          # Set output so the next step knows if we built anything
-          echo "changed=$CHANGED_SKILLS_FOUND" >> $GITHUB_OUTPUT
-
-      - name: Update 'Latest' Release
-        # Only run this step if we actually built a new .skill file
-        if: steps.build.outputs.changed == 'true'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "🚀 Uploading changed skills to 'latest' release..."
-          
-          # Ensure a 'latest' release exists. If it already exists, this command fails silently (|| true)
-          gh release create latest \
-            --title "Latest Skills" \
-            --notes "Continuously updated release containing the latest versions of all skills in the main branch." || true
-          
-          # Upload only the freshly built .skill files. 
-          # --clobber ensures we overwrite the existing file if it's already in the release.
-          gh release upload latest dist/*.skill --clobber
+  build:
+    # Use the reusable workflow from your toolkit repo
+    # Format: {owner}/{repo}/{path}@{ref}
+    uses: jaxnexty/skill-toolkit/.github/workflows/build-skills.yml@main
