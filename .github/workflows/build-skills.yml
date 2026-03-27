@@ -9,4 +9,4 @@ jobs:
   build:
     # Use the reusable workflow from your toolkit repo
     # Format: {owner}/{repo}/{path}@{ref}
-    uses: jaxnexty/skill-toolkit/.github/workflows/build-skills.yml@main
+    uses: jaxnext/skill-toolkit/.github/workflows/build-skills.yml@main
