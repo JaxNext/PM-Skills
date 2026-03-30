@@ -46,7 +46,7 @@ Before generating any questions, you MUST know the following **Required Intake V
 Stop. Ask the user targeted questions to gather this specific information. You may provide a brief example of what a "good" answer looks like to help them. Do not proceed to Phase 2 until this is complete.
 
 ## Phase 2: Generating the Interview Plan
-Once the required variables are collected, generate the structured interview plan using the following output format:
+Once the required variables are collected, generate the structured interview plan using the following output format and save the result plan content into a markdown file:
 
 ### Output Structure
 1. **Research Brief Summary** (A brief recap of the Goal, Audience, and Hypotheses).
