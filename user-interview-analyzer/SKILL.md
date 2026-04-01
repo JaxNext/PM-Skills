@@ -40,7 +40,13 @@ Group the labeled sentences into distinct, logical categories based on thematic 
 - Put sentences with related meanings into the same category.
 - Give each category a meaningful, overarching name that clearly expresses the core user need or core pain point (e.g., "Need for Automated Reporting", "Friction in Cross-Team Collaboration").
 
-### Step 4: Generate Markdown Output
+### Step 4: Prioritize Core Needs
+Analyze the resulting core needs and order them by their importance and severity.
+- Rank the "must-fulfill" needs and critical pain points at the very top.
+- Place "nice-to-have" features, sweet points, or minor inconveniences towards the bottom.
+- Ensure the final list reflects a clear hierarchy of user priorities.
+
+### Step 5: Generate Markdown Output
 Synthesize the extracted, labeled, and categorized data into a single markdown file output.
 
 #### Output Structure Format
