@@ -1,0 +1,23 @@
+{
+  "evals": [
+    {
+      "name": "basic_spec_generation",
+      "description": "Tests if the skill generates a full spec with Mermaid diagram, MVP scope, Entities, and Risks based on a conceptual solution.",
+      "prompt": "Write a solution spec for this conceptual solution.",
+      "inputs": {
+        "solution.md": "**Solution:** Automated Weekly Email Summary\n**Touchpoint:** Email\n**Core Mechanism:** System queries data warehouse every Friday at 5 PM and sends a personalized markdown table to each user.\n**Value:** Saves 15 minutes of manual dashboard loading every morning."
+      },
+      "expected_outputs": [
+        "Why (Background and Target)",
+        "What (Core Business Solution Design)",
+        "How (Core Business Flow Diagram)",
+        "mermaid",
+        "sequenceDiagram",
+        "Scope (MVP)",
+        "Entities & Data Objects",
+        "Success Metrics",
+        "Risks & Dependencies"
+      ]
+    }
+  ]
+}
