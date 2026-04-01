@@ -1,0 +1,20 @@
+{
+  "evals": [
+    {
+      "name": "basic_hmw_ideation",
+      "description": "Tests if the skill generates 3-5 solutions with Touchpoint, Core Mechanism, Value, and evaluates them with RICE and T-Shirt sizing.",
+      "prompt": "Brainstorm solutions for this HMW question.",
+      "inputs": {
+        "hmw.md": "## 1. HMW: How might we automate the data entry process to save time?\n*Context: Users spend 15 minutes manually entering data every morning.*"
+      },
+      "expected_outputs": [
+        "Touchpoint:",
+        "Core Mechanism:",
+        "Value:",
+        "RICE Score:",
+        "Cost (T-Shirt Size):",
+        "Recommended Solution"
+      ]
+    }
+  ]
+}
