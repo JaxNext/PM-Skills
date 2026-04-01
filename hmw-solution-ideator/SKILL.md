@@ -22,35 +22,34 @@ This skill helps product managers and designers brainstorm and evaluate potentia
 
 When asked to brainstorm solutions for HMW questions, follow this step-by-step process:
 
-### Step 1: Read the Input
-Review the provided markdown file or list of prioritized HMW questions. Ensure you understand the core need and context behind each question.
+### Step 1: Initialize the Output File
+Read the provided markdown file or list of prioritized HMW questions. Ensure you understand the core need and context behind each question.
+Create a new markdown file (e.g., `hmw_solutions.md` or as requested by the user) to store the ideation results. Write the main header `# Ideation & Solution Evaluation` to this file.
 
-### Step 2: Brainstorm Solutions
-For each HMW question, ideate 3 to 5 distinct conceptual solutions.
+### Step 2: Ideation Loop
+For *each* HMW question in the input, perform the following steps and **append** the results to the output file before moving to the next question:
+
+#### A. Brainstorm Solutions
+Ideate 3 to 5 distinct conceptual solutions.
 - Keep the solutions at the concept level without deep technical details.
 - For each solution, provide a concise 1-2 sentence description covering:
   - **Touchpoint:** Where the solution happens (e.g., Mobile Dashboard, Onboarding Flow, Email Notification).
   - **Core Mechanism:** How it works (the primary action or logic).
   - **Value:** What the user gains (the direct benefit).
 
-### Step 3: Evaluate ROI
+#### B. Evaluate ROI
 For every proposed solution, evaluate its Return on Investment (ROI) using the following models:
 - **RICE Model:** Estimate Reach, Impact, Confidence, and Effort. Provide a brief justification for the scores.
 - **Cost Estimation:** Use the T-shirt sizing method (S, M, L, XL) to estimate the development and implementation cost (where S is very low cost/effort, and XL is very high). Note: The "Effort" in RICE can align with this T-shirt size.
 
-### Step 4: Determine the Best Fit
-Based on the ROI evaluation and cost estimation, select the single best-fit solution for each HMW question. State why this solution was chosen over the others (e.g., highest impact for the lowest cost).
+#### C. Determine the Best Fit
+Based on the ROI evaluation and cost estimation, select the single best-fit solution for this HMW question. State why this solution was chosen over the others (e.g., highest impact for the lowest cost).
 
-### Step 5: Generate Markdown Output
-Synthesize the brainstormed solutions, evaluations, and final decisions into a structured markdown report.
-
-#### Output Structure Format
-Use the following markdown structure for your final output:
+#### D. Record the Result
+Append the full ideation result for this question—including all proposed solutions, their evaluations, and the recommended solution—to the output file using the following structure:
 
 ```md
-# Ideation & Solution Evaluation
-
-## 1. HMW: [Insert How Might We Question Here]
+## [Number]. HMW: [Insert How Might We Question Here]
 *Context: [Brief summary of the core need being addressed]*
 
 ### Proposed Solutions
@@ -72,15 +71,13 @@ Use the following markdown structure for your final output:
   - *RICE Score:* R: X, I: Y, C: Z, E: W (Total Score: [Score])
   - *Cost (T-Shirt Size):* [S/M/L/XL]
 
-*(Repeat for 3-5 solutions)*
+*(Record all 3-5 solutions here, not just the final choice)*
 
 ### Recommended Solution
 **[Name of Best Fit Solution]**
 *Why:* [Brief justification based on ROI and cost evaluation].
 
 ---
-## 2. HMW: [Insert Next How Might We Question Here]
-*(Repeat the structure for each HMW question)*
 ```
 
-Save the final result into a new markdown file named `hmw_solutions.md` (or another appropriate name requested by the user).
+*(Repeat the Ideation Loop for every HMW question until all are processed)*
