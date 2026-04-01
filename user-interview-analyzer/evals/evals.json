@@ -1,0 +1,17 @@
+{
+  "evals": [
+    {
+      "name": "basic_interview_analysis",
+      "description": "Tests if the skill correctly extracts, labels, and categorizes pain points and habits from a transcript.",
+      "prompt": "Analyze this user interview transcript.",
+      "inputs": {
+        "transcript.txt": "I use the reporting tool every morning, but it takes 15 minutes to load the dashboard. It's really frustrating. I wish I could just get a weekly email summary instead. On the plus side, the charts look great once they finally render."
+      },
+      "expected_outputs": [
+        "Dashboard Loading Latency",
+        "Weekly Email Summary",
+        "15 minutes to load"
+      ]
+    }
+  ]
+}
