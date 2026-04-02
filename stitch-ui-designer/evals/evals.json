@@ -1,0 +1,17 @@
+{
+  "evals": [
+    {
+      "name": "basic_stitch_design",
+      "description": "Tests if the skill asks clarifying questions and creates an ASCII wireframe before jumping into Stitch generation.",
+      "prompt": "Design a dashboard for monitoring daily active users.",
+      "inputs": {},
+      "expected_outputs": [
+        "Target Audience",
+        "Design Mode",
+        "ASCII Wireframe",
+        "mcp_stitch_create_project",
+        "mcp_stitch_generate_screen_from_text"
+      ]
+    }
+  ]
+}

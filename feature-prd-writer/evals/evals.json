@@ -1,0 +1,22 @@
+{
+  "evals": [
+    {
+      "name": "basic_feature_prd",
+      "description": "Tests if the skill generates a highly structured PRD including all 7 core sections plus the impact assessment for a simple feature.",
+      "prompt": "Write a PRD for a 'Remind to Ship' button on the order details page.",
+      "inputs": {},
+      "expected_outputs": [
+        "Meta Data",
+        "Background & User Story",
+        "Flow & State Machine",
+        "Layout & UI Guidelines",
+        "Detailed Rules",
+        "Display Rules",
+        "Edge Cases & Empty States",
+        "Tracking & Analytics",
+        "Non-Functional & Global Configs",
+        "Impact Analysis"
+      ]
+    }
+  ]
+}
