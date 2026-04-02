@@ -1,0 +1,27 @@
+{
+  "evals": [
+    {
+      "name": "basic_solution_breakdown",
+      "description": "Tests if the skill can break down a solution spec into a Master PRD with correct structure and slicing strategy.",
+      "prompt": "Break down the attached solution spec into PRDs.",
+      "inputs": {
+        "solution_spec.md": "# Solution Specification: Food Delivery Platform\n\n## 1. Why\nTo provide a seamless food ordering and delivery experience.\n\n## 2. What\nA platform connecting hungry users, local restaurants, and delivery drivers.\n\n## 3. Scope (MVP)\n- User App: Browsing, ordering, payment.\n- Merchant Portal: Menu management, order acceptance.\n- Driver App: Order matching, delivery routing."
+      },
+      "expected_outputs": [
+        "User Story Mapping",
+        "Backbone",
+        "Stories",
+        "Slicing MVP",
+        "Slicing Strategy",
+        "By Terminal & Role",
+        "Master PRD",
+        "Global Business Flow",
+        "Global State Machine",
+        "Data Dictionary",
+        "Sub-PRD Index",
+        "Data Handoff",
+        "State Handoff"
+      ]
+    }
+  ]
+}
