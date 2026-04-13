@@ -34,6 +34,7 @@ Do not rush to draw diagrams. Break down the PRD and extract the **Minimum Viabl
 **Action:**
 - Ask the user targeted clarifying questions if core NFRs or constraints are missing.
 - **Version Confirmation (CRITICAL)**: After understanding the requirements and identifying the target frameworks/tech stack, you MUST explicitly ask the user to confirm if you should use the latest stable versions of those frameworks. Do not proceed or assume versions until the user confirms, to prevent choosing outdated frameworks.
+- **Local Dev Environment**: If Docker is chosen as the container runtime, ask the user if they want to add a `docker-compose.dev.yml` that mounts volumes to keep source code and container inner files in sync for local development and debugging.
 - Limit clarification to a maximum of **2 rounds**.
 - If details remain missing, proceed using industry-standard assumptions. You MUST explicitly mark these as `[Assumption]` in the documentation.
 
