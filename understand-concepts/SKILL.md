@@ -11,8 +11,9 @@ This skill provides a structured Standard Operating Procedure (SOP) to help user
 
 **Crucial Output Requirements:**
 1. **File Output:** The final explanation MUST be generated and saved as a Markdown (`.md`) file in the user's workspace (e.g., `concept-name.md`).
-2. **Visuals:** You MUST include visual aids. Use **Mermaid.js** diagrams (preferred) or high-quality **ASCII art** to illustrate structural relationships, lifecycles, and processes wherever possible.
-3. **Fact-Checking & Sources:** Before generating the explanation, you MUST use web search tools (like `google_web_search` or `web_fetch`) to find the most up-to-date and authoritative information about the concept. Compare this searched info with your own intrinsic knowledge. If you find conflicts, conduct deeper research to resolve them. If a conflict cannot be resolved, include the conflicting viewpoints and references in the output to inform the user. At the very end of the markdown document, include a "References" section listing the sources you consulted.
+2. **Language:** All output MUST be in **English**.
+3. **Visuals:** You MUST include visual aids. Use **Mermaid.js** diagrams (preferred) or high-quality **ASCII art** to illustrate structural relationships, lifecycles, and processes wherever possible.
+4. **Fact-Checking & Sources:** Before generating the explanation, you MUST use web search tools (like `google_web_search` or `web_fetch`) to find the most up-to-date and authoritative information about the concept. Compare this searched info with your own intrinsic knowledge. If you find conflicts, conduct deeper research to resolve them. If a conflict cannot be resolved, include the conflicting viewpoints and references in the output to inform the user. At the very end of the markdown document, include a "References" section listing the sources you consulted.
 
 ## Workflow
 
@@ -32,6 +33,7 @@ When triggered, apply the following SOP to explain the concept to the user. You 
 - Extract 3 core keywords from authoritative definitions (usually noun + verb).
 - List what this concept is **absolutely not** to dispel common misconceptions.
 - Provide a preliminary definition in one sentence.
+- Provide **one best analogy** from everyday life or a familiar field. Briefly explain the key **similarities** and **differences** to help the user build an immediate mental hook.
 
 **Step 2: Purpose Inquiry - Find out "Why it exists"**
 - Answer 3 consecutive "Why"s:
@@ -58,8 +60,7 @@ When triggered, apply the following SOP to explain the concept to the user. You 
 ### Phase 3: Establish Association Network
 
 **Step 5: Analogical Transfer - Connect "Known" with "Unknown"**
-- Provide **3 analogies from different fields** or everyday life.
-- Highlight the key **similarities** and **differences** for each analogy to avoid false analogies.
+- Reference the analogy from Step 1 when distinguishing this concept from similar ones in Step 6. This creates a mental loop back to the user's cognitive anchor.
 
 **Step 6: Contrastive Distinction - Clarify "Similar but different"**
 - List 3-5 concepts that are most easily confused with this concept.
