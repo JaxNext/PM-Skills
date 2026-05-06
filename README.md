@@ -67,13 +67,31 @@ The skills in this repository are designed to be compatible with any AI agent or
 1. Provide the `SKILL.md` and any associated `references/` or `assets/` to your AI assistant.
 2. Instruct the AI to adopt the skill, for example: "Please act according to the instructions in the `plan-user-interviews/SKILL.md` file."
 
-### Tool-Specific Installation
+### Local Build
 
-For tools with native skill package management, you can install the pre-packaged `.skill` files directly:
+You can build `.skill` files locally without waiting for the CI pipeline:
+
+```bash
+# Build specific skill(s)
+./build-skills.sh feature-prd-writer
+./build-skills.sh feature-prd-writer hmw-solution-ideator
+
+# Build all skills
+./build-skills.sh
+
+# Show available skill names
+./build-skills.sh --help
+```
+
+The output `<name>.skill` files are placed in the project root. These are the same zip-based packages that the CI workflow produces, and can be installed into any compatible tool.
+
+### Download from Releases
+
+For tools with native skill package management, you can also install the pre-packaged `.skill` files from GitHub Releases:
 
 1. **Download the skill:**
    Navigate to the [Releases page](../../releases) of this repository and download the latest `.skill` file for the skill you want to use.
-   *(Note: The `.skill` files are automatically built and published via GitHub Actions on every release).*
+   *(Note: The `.skill` files are automatically built and published via GitHub Actions on every push to main).*
    
 2. **Install the skill:**
    Follow your specific tool's documentation for installing local skills. For example:
